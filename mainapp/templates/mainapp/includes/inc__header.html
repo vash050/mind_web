@@ -44,7 +44,7 @@
         <ul id="myDropdown" class="flex menu__list">
             <li id="closeNav" class="closebtn accent-font closeNav">&times;</li>
             <li class="sidenav-link-mobil">
-                <a href="service.html" id="meLink" class="sidenav-link main-nav-link meLink">
+                <a href="{% url 'mainapp:service' %}" id="meLink" class="sidenav-link main-nav-link meLink">
                     Услуги.
                 </a>
             </li>
@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li>
-                <a href="team.html" id="meLink" class="sidenav-link main-nav-link meLink">
+                <a href="{% url 'mainapp:team' %}" id="meLink" class="sidenav-link main-nav-link meLink">
                     О нас.
                     <svg viewBox="0 0 104 52" fill="none" class="svg svg-sidenav">
                         <path
@@ -65,7 +65,7 @@
                 </a>
             </li>
             <li>
-                <a href="service.html" class="main-nav-link sidenav-link ">
+                <a href="{% url 'mainapp:service' %}" class="main-nav-link sidenav-link ">
                     Тарифы.
                     <svg viewBox="0 0 104 52" fill="none" class="svg svg-sidenav-long">
                         <path
