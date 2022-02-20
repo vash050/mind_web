@@ -1,0 +1,106 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+
+02 COLORS
+
+'Black':  #080A09;
+Dark font: #1E0073
+Accent: #00FFFF;
+Menu-font:  #F2F2F2;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  html {
+    /* font-size: 10px; */
+  
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: Mulish;
+    line-height: 1;
+    font-weight: 400;
+    color: #ffffff;
+  
+    /* Only works if there is nothing absolutely positioned in relation to body */
+    overflow-x: hidden;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  
+
+input {
+  border: none;
+}
+
+  input:focus {
+    outline:none;
+}
+  /**************************/
+/* GENRAL REUSABLE COMPONENTS */
+/**************************/
+
+.container {
+  /* 1140px */
+  /* max-width: 120rem; */
+  padding: 0 13.8rem;
+  margin: 0 auto;
+}
+
+.bgr-img-cover {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+
+  /* margin-bottom: 9.6rem; */
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.flex {
+  display: flex;
+}
+
+.accent-font {
+color: #00FFFF;
+font-weight: 700;
+}
+
+.purple-font {
+  color: #AE00BE;
+}
