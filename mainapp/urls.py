@@ -8,4 +8,5 @@ app_name = 'mainapp'
 
 urlpatterns = [
     path('', mainapp.index, name='index'),
+    path('service/', mainapp.service, name='service'),
 ]

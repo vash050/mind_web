@@ -10,3 +10,14 @@ def index(request):
         "title": title,
     }
     return render(request, 'mainapp/index.html', context=content)
+
+
+def service(request):
+    """
+        main page
+        """
+    title = 'MindWeb - услуги'
+    content = {
+        "title": title,
+    }
+    return render(request, 'mainapp/service.html', context=content)

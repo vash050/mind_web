@@ -1,0 +1,485 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block conteiner %}
+   
+    <title>MindWeb - услуги</title>
+
+  <body>
+    <header class="flex header black-bgr">
+      <nav class="main-nav">
+        <ul class="flex main-nav-list">
+          <li>
+            <a href="index.html">
+              <img class="logo" alt="MindWeb logo" src="{% static 'img/logo.svg' %}" />
+            </a>
+          </li>
+          <li class="main-nav-list-li">
+            <a class="main-nav-link" href="service.html"
+              >Услуги.
+              <svg viewBox="0 0 104 52" fill="none" class="svg-main-menu">
+                <path
+                  class="path"
+                  d="M42.5 7C42.5 7 15.9999 6 6.99996 12.5C-1.99999 19 1.99999 29.5 3.99997 33.5C5.99994 37.5 9.49997 45 24.5 49C39.5 53 62.5 51 72.9999 49C83.4999 47 92.9999 46.5 99.4999 37.5C106 28.5 103 21.5 91.9999 15C80.9999 8.5 74.3412 7.78516 62.5 5C52.1239 2.55946 35.5 1 35.5 1"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="main-nav-list-li">
+            <a class="main-nav-link" href="#"
+              >Проекты.
+              <svg viewBox="0 0 104 52" fill="none" class="svg-main-menu">
+                <path
+                  class="path"
+                  d="M42.5 7C42.5 7 15.9999 6 6.99996 12.5C-1.99999 19 1.99999 29.5 3.99997 33.5C5.99994 37.5 9.49997 45 24.5 49C39.5 53 62.5 51 72.9999 49C83.4999 47 92.9999 46.5 99.4999 37.5C106 28.5 103 21.5 91.9999 15C80.9999 8.5 74.3412 7.78516 62.5 5C52.1239 2.55946 35.5 1 35.5 1"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="flex main-nav-list">
+        <button class="btn-nav">Связаться с нами</button>
+        <div class="flex burger-menu-block openNav" id="openNav">
+          <div class="burger-menu openNav">&nbsp;</div>
+        </div>
+      </div>
+    </header>
+    <div id="mySidenav" class="sidenav">
+      <ul id="myDropdown" class="flex menu__list">
+          <li id="closeNav" class="closebtn accent-font closeNav">&times;</li>
+          <li class="sidenav-link-mobil">
+            <a href="service.html" id="meLink" class="sidenav-link main-nav-link meLink">
+              Услуги.
+          </a>
+        </li>
+        <li class="sidenav-link-mobil">
+          <a href="#" id="meLink" class="sidenav-link main-nav-link meLink">
+            Проекты.
+        </a>
+      </li>
+          <li>
+            <a href="team.html" id="meLink" class="sidenav-link main-nav-link meLink">
+              О нас.
+            <svg viewBox="0 0 104 52" fill="none" class="svg svg-sidenav">
+              <path
+                class="path"
+                d="M42.5 7C42.5 7 15.9999 6 6.99996 12.5C-1.99999 19 1.99999 29.5 3.99997 33.5C5.99994 37.5 9.49997 45 24.5 49C39.5 53 62.5 51 72.9999 49C83.4999 47 92.9999 46.5 99.4999 37.5C106 28.5 103 21.5 91.9999 15C80.9999 8.5 74.3412 7.78516 62.5 5C52.1239 2.55946 35.5 1 35.5 1"
+              />
+            </svg>
+          </a>
+        </li>
+          <li>
+            <a href="service.html" class="main-nav-link sidenav-link ">
+              Тарифы.
+            <svg viewBox="0 0 104 52" fill="none" class="svg svg-sidenav-long">
+              <path
+                class="path"
+                d="M42.5 7C42.5 7 15.9999 6 6.99996 12.5C-1.99999 19 1.99999 29.5 3.99997 33.5C5.99994 37.5 9.49997 45 24.5 49C39.5 53 62.5 51 72.9999 49C83.4999 47 92.9999 46.5 99.4999 37.5C106 28.5 103 21.5 91.9999 15C80.9999 8.5 74.3412 7.78516 62.5 5C52.1239 2.55946 35.5 1 35.5 1"
+              />
+            </svg>
+          </a>
+        </li> 
+      </ul>
+      <div class="flex menu__list menu__list-mobil">
+      <p class="sidenav-contact">+7 911 402 43 89</p>
+      <p class="sidenav-contact">info@mind-web.ru</p>
+      <div class="flex sidenav-social-media">
+        <img src="{% static 'img/telegram.svg' %}" alt="telegram-icon">
+        <img src="{% static 'img/instagram.svg' %}" alt="instagram-icon">
+      </div>
+    </div>
+  </div>
+    <section class="prices-desctop">
+      <h2 class="container h2 h2-section">Наши цены.</h2>
+      <div class="container grid grid--2-cols price-base-gaps">
+        <p class="prices-text">
+          Большинство сайтов различаются по цене и срокам, это зависит от
+          интерфейса, количества блоков и страниц, технической части.
+        </p>
+        <p class="prices-text mobile-line">
+          Поэтому, утверждение окончательной цены и сроков исполнения происходит
+          индивидуально в zoom.
+        </p>
+        <div class="flex prices-block mobile-line-top">
+          <h3 class="purple-font h3-price">Лендинг</h3>
+          <div class="grid grid--3-cols price-gaps">
+            <p class="price-header">Услуги</p>
+            <p class="mini price-header">Тариф mini</p>
+            <p class="stansart price-header">Тариф standart</p>
+            <p>Исследование конкурентов</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Прототип</p>
+            <p class="mini">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Индивидуальный дизайн</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Адаптивный сайт</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Анимация</p>
+            <p class="mini"></p>
+            <p class="standart">>3 блоков</p>
+            <p>Количество блоков</p>
+            <p class="mini">3-6</p>
+            <p class="standart">6-9</p>
+            <p>Доменное имя</p>
+            <p class="mini">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Установка на хостинг</p>
+            <p class="mini">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Форма заказа</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Форма обратной связи</p>
+            <p class="mini">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Базовая SEO</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+          </div>
+          <p class="price-block-text">Срок реализации от 3-х недель</p>
+          <p class="purple-font h3-price">от 10000 рублей</p>
+        </div>
+        <div class="flex prices-block mobile-line-top mobile-line-bottom">
+          <h3 class="purple-font h3-price">Корпоративный сайт</h3>
+          <div class="grid grid--3-cols price-gaps">
+            <p class="price-header">Услуги</p>
+            <p class="mini price-header">Тариф mini</p>
+            <p class="standart price-header">Тариф standart</p>
+            <p>Исследование конкурентов</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Прототип</p>
+            <p class="mini">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Индивидуальный дизайн</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Адаптивный сайт</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Анимация</p>
+            <p class="mini"></p>
+            <p class="standart">простая</p>
+            <p>Количество страниц</p>
+            <p class="mini">1-5</p>
+            <p class="standart">5-10</p>
+            <p>Доменное имя</p>
+            <p class="mini">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Установка на хостинг</p>
+            <p class="mini">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Форма заказа</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Форма обратной связи</p>
+            <p class="mini">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+            <p>Базовая SEO</p>
+            <p class="mini"></p>
+            <p class="standart">
+              <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+            </p>
+          </div>
+          <p class="price-block-text">Срок реализации от 6-ти недель</p>
+          <p class="purple-font h3-price">от 20000 рублей</p>
+        </div>
+      </div>
+    </section>
+    <section class="prices-tablet">
+      <h2 class="container h2 h2-section">Наши цены.</h2>
+      <div class="container grid price-base-gaps">
+        <p class="prices-text">
+          Большинство сайтов различаются по цене и срокам, это зависит от
+          интерфейса, количества блоков и страниц, технической части.
+        </p>
+        <p class="prices-text">
+          Поэтому, утверждение окончательной цены и сроков исполнения происходит
+          индивидуально в zoom.
+        </p>
+        <!-- swiper is here -->
+        <div class="swiper mySwiperPrice">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide prices-block-tablet">
+              <div class="swiper-slide flex prices-block">
+                <h3 class="purple-font h3-price">Лендинг</h3>
+                <div class="grid grid--3-cols price-gaps">
+                  <p class="price-header">Услуги</p>
+                  <p class="mini price-header">Тариф mini</p>
+                  <p class="stansart price-header">Тариф standart</p>
+                  <p>Исследование конкурентов</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Прототип</p>
+                  <p class="mini">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Индивидуальный дизайн</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Адаптивный сайт</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Анимация</p>
+                  <p class="mini"></p>
+                  <p class="standart">>3 блоков</p>
+                  <p>Количество блоков</p>
+                  <p class="mini">3-6</p>
+                  <p class="standart">6-9</p>
+                  <p>Доменное имя</p>
+                  <p class="mini">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Установка на хостинг</p>
+                  <p class="mini">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Форма заказа</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Форма обратной связи</p>
+                  <p class="mini">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Базовая SEO</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                </div>
+                <p class="price-block-text">Срок реализации от 3-х недель</p>
+                <p class="purple-font h3-price">от 10000 рублей</p>
+              </div>
+            </div>
+            <div class="swiper-slide prices-block-tablet">
+              <div class="flex prices-block">
+                <h3 class="purple-font h3-price">Корпоративный сайт</h3>
+                <div class="grid grid--3-cols price-gaps">
+                  <p class="price-header">Услуги</p>
+                  <p class="mini price-header">Тариф mini</p>
+                  <p class="standart price-header">Тариф standart</p>
+                  <p>Исследование конкурентов</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Прототип</p>
+                  <p class="mini">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Индивидуальный дизайн</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Адаптивный сайт</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Анимация</p>
+                  <p class="mini"></p>
+                  <p class="standart">простая</p>
+                  <p>Количество страниц</p>
+                  <p class="mini">1-5</p>
+                  <p class="standart">5-10</p>
+                  <p>Доменное имя</p>
+                  <p class="mini">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Установка на хостинг</p>
+                  <p class="mini">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Форма заказа</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Форма обратной связи</p>
+                  <p class="mini">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                  <p>Базовая SEO</p>
+                  <p class="mini"></p>
+                  <p class="standart">
+                    <img src="{% static 'img/check_box.svg' %}" alt="checked" />
+                  </p>
+                </div>
+                <p class="price-block-text">Срок реализации от 6-ти недель</p>
+                <p class="purple-font h3-price">от 20000 рублей</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="container footer">
+      <div class="flex footer-section">
+        <h2 class="h2-footer">Мы всегда рады сотрудничеству!</h2>
+        <p class="text-footer">
+          Заполните, пожалуйста, форму и мы свяжемся с вами в ближайшее время!
+        </p>
+        <form action="#" class="flex footer-form">
+          <!-- <label for="name">Имя</label> -->
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Имя"
+            class="input-form"
+          />
+          <!-- <label for="phone">Телефон</label> -->
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Телефон"
+            class="input-form"
+          />
+          <!-- <label for="email">E-mail</label> -->
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+            class="input-form"
+          />
+          <!-- <label for="website_type">Тип сайта</label> -->
+          <input
+            type="text"
+            name="website_type"
+            id="website_type"
+            placeholder="Тип сайта"
+            class="input-form"
+          />
+
+          <label for="policy" class="label-form">
+            <input type="checkbox" name="policy" id="policy" required />
+            <span
+              >Я подтверждаю согласие на обработку персональных данных в
+              соответствии с условиями
+              <span class="policy-span">Политики конфиденциальности</span></span
+            >
+          </label>
+
+          <button type="submit" class="button-form">Отправить</button>
+        </form>
+      </div>
+      <div class="grid footer-info grid-mobil-footer">
+        <div class="flex footer-info-contact">
+          <p>+7 911 402 43 89</p>
+          <p>info@mind-web.ru</p>
+        </div>
+        <nav>
+          <ul class="flex footer-info-menu">
+            <li>О нас.</li>
+            <li>Тарифы.</li>
+            <li>Политика конфиденциальности.</li>
+          </ul>
+        </nav>
+        <div class="flex footer-social-media">
+          <img
+            src="{% static 'img/telegram.svg' %}"
+            class="icon-social-media"
+            alt="telegram icon"
+          />
+          <img
+            src="{% static 'img/instagram.svg' %}"
+            class="icon-social-media"
+            alt="instagram icon"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+{% endblock %}
