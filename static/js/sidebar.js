@@ -1,11 +1,8 @@
 let openNavBlock = document.getElementById("openNav");
 let closeNavBlock = document.getElementById("closeNav");
 let menuHeight = document.getElementById("mySidenav");
-const me = document.getElementById("meLink");
 let breakpointMobil = window.matchMedia("(max-width:544px)");
 const screenHeight = window.screen.height;
-
-me.addEventListener("click", closeNav);
 
 document.addEventListener(
   "click",
@@ -33,7 +30,7 @@ function openNav() {
     document.getElementById("mySidenav").style.opacity = "1";
     document.getElementById("mySidenav").style.zIndex = "2";
     if (breakpointMobil.matches === true) {
-      console.log("BREAKPOINT");
+      
       document.getElementById("mySidenav").style.width = "100vw";
     } else {
       document.getElementById("mySidenav").style.width = "50vw";

@@ -1,4 +1,22 @@
 /**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  html {
+    font-size: 50%;
+  }
+
+  .btn-nav {
+    width: 30rem;
+  }
+
+  .heading-primary {
+    font-size: 8rem;
+  }
+}
+
+/**************************/
 /* BELOW 944px (Tablets) */
 /**************************/
 
@@ -48,7 +66,9 @@
   .team-desctop,
   .project-desctop-section,
   .heading-primary-mobile,
-  .hide-on-mobil {
+  .show-on-mobil,
+  .hide-on-mobil,
+  .hide {
     display: none;
   }
 
@@ -59,17 +79,28 @@
     display: block;
   }
 
+  .hide-desctop {
+    display: flex;
+  }
+
   /**************************/
   /* MENU SECTION */
   /**************************/
 
-  .btn-nav,
   .main-nav-list-li {
     display: none;
   }
 
   .project-tablet-section {
     display: block;
+  }
+
+  .sidenav {
+  padding-right: 3.5rem;
+  }
+
+  .sidenav .closebtn {
+    padding-right: 3.5rem;
   }
 
   .swiper {
@@ -125,6 +156,10 @@
   }
 
   .one:hover, .one:active ~ .one-hide {
+    display: block;
+  }
+
+  .one:active ~ .one-hide {
     display: block;
   }
   .two:hover, .two:active ~ .two-hide {
@@ -199,6 +234,15 @@
     padding-bottom: 1.5rem;
   }
 
+  .main-nav-list-mobil {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    justify-content: end;
+  }
+
 }
 
 /**************************/
@@ -208,15 +252,21 @@
 @media (max-width: 34em) {
   .project-desctop-section,
   .team-desctop,
-  .prices-desctop {
+  .prices-desctop,
+  .show-on-mobil {
     display: block;
+  }
+
+  .hide-desctop {
+    display: flex;
   }
 
   .project-tablet-section,
   .team-tablet,
   .prices-tablet,
   .heading-primary,
-  .hide-on-mobil {
+  .hide-on-mobil,
+  .hide {
     display: none !important;
   }
 
@@ -290,7 +340,8 @@
   }
 
   .sidenav .closebtn {
-    padding-right: 2.85rem;
+    margin-top: 2.5rem;
+    padding-right: 3.5rem;
   }
 
   .sidenav-link {
@@ -356,7 +407,7 @@
 
   .menu-accent-content {
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 3.2rem;
   }
 
   .mySwiperMenu {
