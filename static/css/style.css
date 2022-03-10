@@ -3,8 +3,13 @@
 .prices-tablet,
 .menu-tablet-section,
 .heading-primary-mobile,
-.sidenav-link-mobil {
+.sidenav-link-mobil,
+.hide-desctop {
   display: none;
+}
+
+.hide {
+  display: block;
 }
 
 /**************************/
@@ -15,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   /* background-color: #080a09; */
-
+  /* z-index: -1; */
   overflow: hidden;
 
   /* Because we want header to be sticky later */
@@ -34,6 +39,7 @@
 /**************************/
 /* NAVIGATION */
 /**************************/
+
 
 .main-nav-list {
   list-style: none;
@@ -56,10 +62,11 @@
 .main-nav-link {
   position: relative;
   display: flex;
-align-items: center;
+  align-items: center;
 }
 
 .svg-main-menu {
+  position: absolute;
   width: 13.5rem;
   height: 9.25rem;
   top: -3.5rem;
@@ -82,8 +89,8 @@ align-items: center;
 
 .main-nav-link > .svg:hover {
   stroke: #00ffff;
-  animation: dash 1.2s linear forwards;
-  -webkit-animation: dash 1.2s linear forwards;
+  animation: dash 0.7s linear forwards;
+  -webkit-animation: dash 0.7s linear forwards;
 }
 
 @keyframes dash {
@@ -332,17 +339,17 @@ align-items: center;
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding-top: 10.85rem;
-  padding-right: 8.85rem;
+  padding-top: 14.85rem;
+  padding-right: 13.8rem;
   opacity: 0;
 }
 .sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 3.8rem;
-  margin-top: 10px;
-  padding-right: 8.85rem;
+  font-size: 5rem;
+  margin-top: 5rem;
+  padding-right: 13.8rem;
   cursor: pointer;
 }
 
@@ -382,13 +389,13 @@ align-items: center;
 }
 
 .sidenav-link > .svg-sidenav:hover,
-.svg-sidenav-long:hover, .svg-sidenav:active,
+.svg-sidenav-long:hover,
+.svg-sidenav:active,
 .svg-sidenav-long:active {
   /*display: none;
-    */
-  stroke: #00ffff;
-  animation: dash 1.2s linear forwards;
-  -webkit-animation: dash 1.2s linear forwards;
+  */stroke: #00ffff;
+  animation: dash 0.7s linear forwards;
+  -webkit-animation: dash 0.7s linear forwards;
 }
 
 .sidenav-social-media {
@@ -419,13 +426,13 @@ align-items: center;
 }
 
 .one:hover ~ .one-hide {
-  display: block;
+  display: block !important;
 }
 .two:hover ~ .two-hide {
-  display: block;
+  display: block !important;
 }
 .three:hover ~ .three-hide {
-  display: block;
+  display: block !important;
 }
 
 .bold {
@@ -483,6 +490,14 @@ align-items: center;
   height: 100%;
 }
 
+.project-desctop-section {
+  display: block;
+}
+
+.show-on-mobil {
+  display: none;
+}
+
 /**************************/
 /* FOOTER SECTION */
 /**************************/
@@ -508,6 +523,16 @@ align-items: center;
   margin-bottom: 3.8rem;
 }
 
+.form--input--block {
+  width: 100%;
+}
+
+.main-form-error {
+  color: #1e0073;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
 .input-form::placeholder {
   color: #1e0073;
   font-size: 2rem;
@@ -529,6 +554,7 @@ align-items: center;
   border-bottom: 1px solid #1e0073;
   color: #1e0073;
   line-height: 5.5rem;
+  width: 100%;
 }
 
 .label-form {

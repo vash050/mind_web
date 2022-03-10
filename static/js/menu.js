@@ -4,13 +4,6 @@ const links = [...document.getElementsByClassName("menu--link")];
 const contents = [...document.getElementsByClassName("menu--content")];
 const menuLength = links.length - 1;
 
-let verticalMenu = [
-  'Сайты под ключ', 
-  'Информационные порталы и блоги', 
-  'Приложения', 
-  'UX/UI дизайн'
-  ];
-
 let tempLink;
 
 const showMenu = function (index, indexLinks) {
@@ -18,7 +11,7 @@ const showMenu = function (index, indexLinks) {
   let currentMenuBlocks = [];
   menuListblocks.forEach((e, i) => {
     if (e.getAttribute("data-id") == index) {
-      console.log(e);
+      
       currentMenuBlocks.push(e);
     }
   });
@@ -56,7 +49,7 @@ const hideMenuContent = function () {
   TLHIDE.fromTo(
     contents,
     { autoAlpha: 1, display: "block" },
-    { autoAlpha: 0, display: "none", duration: 0.5 }
+    { autoAlpha: 0, display: "none", duration: 0.02 }
   );
 };
 
