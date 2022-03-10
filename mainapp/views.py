@@ -32,3 +32,11 @@ def team(request):
         "title": title,
     }
     return render(request, 'mainapp/team.html', context=content)
+
+
+def order(request):
+    # print(request.method)
+    if request.method == 'POST':
+        form_data = request.data
+        print(form_data)
+    return render(request, 'mainapp/team.html')
