@@ -1,0 +1,82 @@
+{% load static %}
+
+<footer class="container footer">
+    <div class="flex footer-section">
+        <h2 class="h2-footer">Мы всегда рады сотрудничеству!</h2>
+        <p class="text-footer">
+            Заполните, пожалуйста, форму и мы свяжемся с вами в ближайшее время!
+        </p>
+        <form action="#" class="flex footer-form" name="main">
+            <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Имя"
+                    class="input-form"
+            />
+            <div class="form--input--block">
+                <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Телефон"
+                        class="input-form"
+                />
+            </div>
+            <div class="form--input--block">
+                <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="E-mail"
+                        class="input-form"
+                />
+            </div>
+            <input
+                    type="text"
+                    name="website_type"
+                    id="website_type"
+                    placeholder="Тип сайта"
+                    class="input-form"
+            />
+
+            <label for="policy" class="label-form">
+                <input type="checkbox" name="policy" id="policy" required/>
+                <span
+                >Я подтверждаю согласие на обработку персональных данных в
+            соответствии с условиями
+            <span class="policy-span">Политики конфиденциальности</span></span
+                >
+            </label>
+
+            <button type="submit" class="button-form" id="submitButton">
+                Отправить
+            </button>
+        </form>
+    </div>
+    <div class="grid footer-info grid-mobil-footer">
+        <div class="flex footer-info-contact">
+            <p>+7 911 402 43 89</p>
+            <p>info@mind-web.ru</p>
+        </div>
+        <nav>
+            <ul class="flex footer-info-menu">
+                <li>О нас.</li>
+                <li>Тарифы.</li>
+                <li>Политика конфиденциальности.</li>
+            </ul>
+        </nav>
+        <div class="flex footer-social-media">
+            <img
+                    src="{% static 'img/telegram.svg' %}"
+                    class="icon-social-media"
+                    alt="telegram icon"
+            />
+            <img
+                    src="{% static 'img/instagram.svg' %}"
+                    class="icon-social-media"
+                    alt="instagram icon"
+            />
+        </div>
+    </div>
+</footer>
