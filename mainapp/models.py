@@ -59,3 +59,10 @@ class Order(models.Model):
     email = models.EmailField(max_length=240, blank=True)
     type_site = models.CharField(max_length=1, choices=Type_site, default='N')
     time_create = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'заказ'
+        verbose_name_plural = 'заказы'
+
+    def __str__(self):
+        return self.name
