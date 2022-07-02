@@ -6,7 +6,10 @@
         <p class="text-footer">
             Заполните, пожалуйста, форму и мы свяжемся с вами в ближайшее время!
         </p>
-        <form action="#" class="flex footer-form" name="main">
+        <form action="{% url 'mainapp:order' %}" class="flex footer-form" name="main" method="post"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+
             <input
                     type="text"
                     name="name"
@@ -32,13 +35,13 @@
                         class="input-form"
                 />
             </div>
-            <input
-                    type="text"
-                    name="website_type"
-                    id="website_type"
-                    placeholder="Тип сайта"
-                    class="input-form"
-            />
+{#            <input#}
+{#                    type="text"#}
+{#                    name="website_type"#}
+{#                    id="website_type"#}
+{#                    placeholder="Тип сайта"#}
+{#                    class="input-form"#}
+{#            />#}
 
             <label for="policy" class="label-form">
                 <input type="checkbox" name="policy" id="policy" required/>

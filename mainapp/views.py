@@ -1,4 +1,8 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse
+
+from mainapp.forms import CreateOrderForm
 
 
 def index(request):
@@ -35,8 +39,17 @@ def team(request):
 
 
 def order(request):
-    # print(request.method)
+    print(request.method)
     if request.method == 'POST':
-        form_data = request.data
-        print(form_data)
-    return render(request, 'mainapp/team.html')
+        form = CreateOrderForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('mainapp:index'))
+    else:
+        form = CreateOrderForm()
+        print(request.POST)
+
+    content = {
+        'form': form,
+    }
+    return render(request, 'mainapp/team.html', content)
