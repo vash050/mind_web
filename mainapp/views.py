@@ -39,17 +39,10 @@ def team(request):
 
 
 def order(request):
-    print(request.method)
     if request.method == 'POST':
         form = CreateOrderForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('mainapp:index'))
-    else:
-        form = CreateOrderForm()
-        print(request.POST)
 
-    content = {
-        'form': form,
-    }
-    return render(request, 'mainapp/team.html', content)
+    return render(request, 'mainapp/index.html')
