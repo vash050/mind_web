@@ -3,21 +3,23 @@
 <footer class="container footer">
     <div class="flex footer-section">
         <h2 class="h2-footer">Мы всегда рады сотрудничеству!</h2>
-        <p class="text-footer">
+        <p class="text-footer" id="test">
             Заполните, пожалуйста, форму и мы свяжемся с вами в ближайшее время!
         </p>
-        <form action="{% url 'mainapp:order' %}" class="flex footer-form" name="main" method="post"
-              enctype="multipart/form-data">
+        <!-- <form action="#" 
+        class="flex footer-form" name="main" method="post" id="formConnect"
+              enctype="multipart/form-data"> -->
+              <form name="main" class="flex footer-form" onsubmit="return fetchpost()" id="formConnect">
             {% csrf_token %}
-
+            <input type="hidden" id="urlForm" value="{% url 'mainapp:order' %}">
             <input
                     type="text"
                     name="name"
                     id="name"
                     placeholder="Имя"
-                    class="input-form"
+                    class="input-form timeline-form"
             />
-            <div class="form--input--block">
+            <div class="form--input--block timeline-form">
                 <input
                         type="tel"
                         name="phone"
@@ -26,7 +28,7 @@
                         class="input-form"
                 />
             </div>
-            <div class="form--input--block">
+            <div class="form--input--block timeline-form">
                 <input
                         type="email"
                         name="email"
@@ -40,10 +42,10 @@
 {#                    name="website_type"#}
 {#                    id="website_type"#}
 {#                    placeholder="Тип сайта"#}
-{#                    class="input-form"#}
+{#                    class="input-form timeline-form"#}
 {#            />#}
 
-            <label for="policy" class="label-form">
+            <label for="policy" class="label-form timeline-form">
                 <input type="checkbox" name="policy" id="policy" required/>
                 <span
                 >Я подтверждаю согласие на обработку персональных данных в
@@ -52,10 +54,14 @@
                 >
             </label>
 
-            <button type="submit" class="button-form" id="submitButton">
+            <button type="submit" class="button-form timeline-form" id="submitButton">
                 Отправить
             </button>
         </form>
+        <div class="form-messagesent" id="messSent">
+            <p class="p-message">Ваша заявка отправлена.</p>
+            <p class="p-message">Спасибо! Мы скоро свяжемся с вами.</p>
+        </div>
     </div>
     <div class="grid footer-info grid-mobil-footer">
         <div class="flex footer-info-contact">
@@ -64,10 +70,10 @@
         </div>
         <nav>
             <ul class="flex footer-info-menu">
-{#                сюда нужны ссылки#}
-                <li>О нас.</li>
-                <li>Тарифы.</li>
-                <li>Политика конфиденциальности.</li>
+
+                <li><a href="{% url 'mainapp:team' %}" class="footer-link">О нас.</a> </li>
+                <li><a href="{% url 'mainapp:service' %}" class="footer-link">Тарифы.</a> </li>
+                <li><a href="#" class="footer-link">Политика конфиденциальности.</a></li>
             </ul>
         </nav>
         <div class="flex footer-social-media">
@@ -77,9 +83,9 @@
                     alt="telegram icon"
             />
             <img
-                    src="{% static 'img/instagram.svg' %}"
+                    src="{% static 'img/vkontakte.svg' %}"
                     class="icon-social-media"
-                    alt="instagram icon"
+                    alt="vkontakte icon"
             />
         </div>
     </div>
