@@ -43,8 +43,7 @@ def order(request):
     if request.method == 'POST':
         try:
             date = loads(request.body.decode('utf-8'))
-            order_new = Order.objects.create(name=date["name"], email=date["email"], phone=date["phone"])
-            print(order_new.pk)
+            Order.objects.create(name=date["name"], email=date["email"], phone=date["phone"])
             return JsonResponse({
                 'status': 'ok',
                 'code': 200
