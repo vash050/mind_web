@@ -1,317 +1,294 @@
-{% extends 'mainapp/base.html' %}
-{% load static %}
-{% block conteiner %}
+{% extends 'mainapp/base.html' %} {% load static %} {% block conteiner %}
 
-    <body>
-    <section class="section-hero bgr-img-cover">
+<body>
+  <section class="section-hero bgr-img-cover">
+    {% include 'mainapp/includes/inc__header.html' %}
 
-        {% include 'mainapp/includes/inc__header.html' %}
-
-        <div class="flex hero">
-            <h1 class="heading-primary">
-                Мы создаем уникальные <br/>и функциональные сайты
-            </h1>
-            <h1 class="heading-primary-mobile">
-                Мы создаем уникальные&nbsp;и функциональные <br/>
-                сайты
-            </h1>
+    <div class="flex hero">
+      <h1 class="heading-primary">
+        Мы создаем уникальные <br />и функциональные сайты
+      </h1>
+      <h1 class="heading-primary-mobile">
+        Мы создаем уникальные&nbsp;и функциональные <br />
+        сайты
+      </h1>
+    </div>
+  </section>
+  <main>
+    <h2 class="container h2 h2-section" id="services">Наши услуги.</h2>
+    <!-- menu desctop -->
+    <section class="menu-desctop">
+      <div class="menu-fonts grid--menu">
+        <div></div>
+        <div
+          class="container menu--content link1 bgr-img-cover grid grid--menu"
+          data-id="link1"
+        >
+          <div class="flex flex-menu">
+            <h2 class="h2 h2-menu">Сайты под ключ</h2>
+            <p class="menu-p" data-id="0">Индивидуальная разработка сайта</p>
+            <p class="menu-p" data-id="0">
+              Адаптивные сайты на любых устройствах
+            </p>
+            <p class="menu-p" data-id="0">
+              Исследование бизнеса, <br />конкурентов и целевой аудитории
+            </p>
+            <p class="menu-p" data-id="0">
+              Наполнение контентом <br />(фото, товары, статьи и т.п.)
+            </p>
+            <div
+              class="flex accent-font menu-accent-content menu-p"
+              data-id="0"
+            >
+              <div class="menu-content one">Лендинг</div>
+              <p class="menu-content-hide one-hide">
+                <span class="bold">Лендинг</span>-это особый тип сайтов,
+                оптимизированных для побуждения к действию
+                интернет-пользователя. Традиционный лендинг описывает продукт,
+                его преимущества и указывает на необходимость в приобретении
+                этого продукта.
+              </p>
+              <div class="menu-content two">Корпоративный сайт</div>
+              <p class="menu-content-hide two-hide">
+                <span class="bold">Корпоративный сайт</span>-это многостраничный
+                и многоуровневый сайт, где можно найти полную информацию о
+                фирме, ее руководстве, продукции, истории. Корпоративные сайты
+                привлекают новых клиентов и удерживают старых.
+              </p>
+              <div class="menu-content three">Сайт-визитка</div>
+              <p class="menu-content-hide three-hide">
+                <span class="bold">Сайт-визитка</span>-небольшой сайт, как
+                правило, состоящий из пяти, семи веб-страниц и содержащий
+                основную информацию об организации, частном лице, компании,
+                товарах или услугах, прейскуранты, контактные данные.
+              </p>
+            </div>
+          </div>
         </div>
+        <div
+          class="container menu--content link2 bgr-img-cover grid grid--menu"
+          data-id="link2"
+        >
+          <div class="flex flex-menu">
+            <h2 class="h2 h2-menu">Информационные порталы и блоги</h2>
+            <p class="menu-p" data-id="1">
+              Адаптивность на мобильных <br />устройствах
+            </p>
+            <p class="menu-p" data-id="1">
+              Комфортная для чтения <br />
+              типографика
+            </p>
+            <p class="menu-p" data-id="1">Удобная навигация по темам</p>
+            <p class="menu-p" data-id="1">
+              Возможность ведения блога в <br />
+              открытом и закрытом режимах
+            </p>
+          </div>
+        </div>
+        <div
+          class="container menu--content link3 bgr-img-cover grid grid--menu"
+          data-id="link3"
+        >
+          <div class="flex flex-menu">
+            <h2 class="h2 h2-menu">Приложения</h2>
+            <p class="menu-p" data-id="2">Анализ рынка и целевой аудитории</p>
+            <p class="menu-p" data-id="2">Исследование пути пользователя</p>
+            <p class="menu-p" data-id="2">Создание стильного интерфейса</p>
+            <p class="menu-p" data-id="2">
+              Разработка удобных и быстрых <br />
+              мобильных приложений
+            </p>
+          </div>
+        </div>
+        <div
+          class="container menu--content link4 bgr-img-cover grid grid--menu"
+          data-id="link4"
+        >
+          <div class="flex flex-menu">
+            <h2 class="h2 h2-menu">UX/UI дизайн</h2>
+            <p class="menu-p" data-id="3">Создание интерактивного прототипа</p>
+            <p class="menu-p" data-id="3">Дизайн в современном стиле</p>
+            <p class="menu-p" data-id="3">
+              Разработка функционального <br />
+              интерфейса
+            </p>
+            <p class="menu-p" data-id="3">Работа с цветом и типографикой</p>
+            <p class="menu-p" data-id="3">Дизайн логотипов и визиток</p>
+          </div>
+        </div>
+        <div class="menu--links accent-font">
+          <div class="flex menu--link" id="link4" data-info="UX/UI дизайн">
+            <p class="menu--link-p">UX/UI дизайн</p>
+          </div>
+          <div class="flex menu--link" id="link3" data-info="Приложения">
+            <p class="menu--link-p">Приложения</p>
+          </div>
+          <div
+            class="flex menu--link"
+            id="link2"
+            data-info="Информационные порталы и блоги"
+          >
+            <p class="menu--link-p">Информационные порталы и блоги</p>
+          </div>
+          <div
+            class="flex menu--link menu--link--hide"
+            id="link1"
+            data-info="Сайты под ключ"
+          >
+            <p class="menu--link-p">Сайты под ключ</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <main>
-        <section class="menu-desctop">
-            <h2 class="container h2 h2-section">Наши услуги.</h2>
-            <div class="menu-fonts grid--menu">
-                <div></div>
-                <div
-                        class="container menu--content link1 bgr-img-cover grid grid--menu"
-                        data-id="link1"
-                >
-                    <div class="flex flex-menu">
-                        <h2 class="h2 h2-menu">Сайты под ключ</h2>
-                        <p class="menu-p" data-id="0">Индивидуальная разработка сайта</p>
-                        <p class="menu-p" data-id="0">
-                            Адаптивные сайты на любых устройствах
-                        </p>
-                        <p class="menu-p" data-id="0">
-                            Исследование бизнеса, <br/>конкурентов и целевой аудитории
-                        </p>
-                        <p class="menu-p" data-id="0">
-                            Наполнение контентом <br/>(фото, товары, статьи и т.п.)
-                        </p>
-                        <div
-                                class="flex accent-font menu-accent-content menu-p"
-                                data-id="0"
-                        >
-                            <div class="menu-content one">
-                                Лендинг
-
-                            </div>
-                            <p class="menu-content-hide one-hide">
-                                <span class="bold">Лендинг</span>-это особый тип сайтов,
-                                оптимизированных для побуждения к действию
-                                интернет-пользователя. Традиционный лендинг описывает продукт,
-                                его преимущества и указывает на необходимость в приобретении
-                                этого продукта.
-                            </p>
-                            <div class="menu-content two">
-                                Корпоративный сайт
-                            </div>
-                            <p class="menu-content-hide two-hide">
-                                <span class="bold">Корпоративный сайт</span>-это
-                                многостраничный и многоуровневый сайт, где можно найти полную
-                                информацию о фирме, ее руководстве, продукции, истории.
-                                Корпоративные сайты привлекают новых клиентов и удерживают
-                                старых.
-                            </p>
-                            <div class="menu-content three">
-                                Сайт-визитка
-                            </div>
-                            <p class="menu-content-hide three-hide">
-                                <span class="bold">Сайт-визитка</span>-небольшой сайт, как
-                                правило, состоящий из пяти, семи веб-страниц и содержащий
-                                основную информацию об организации, частном лице, компании,
-                                товарах или услугах, прейскуранты, контактные данные.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div
-                        class="container menu--content link2 bgr-img-cover grid grid--menu"
-                        data-id="link2"
-                >
-                    <div class="flex flex-menu">
-                        <h2 class="h2 h2-menu">Информационные порталы и блоги</h2>
-                        <p class="menu-p" data-id="1">
-                            Адаптивность на мобильных <br/>устройствах
-                        </p>
-                        <p class="menu-p" data-id="1">
-                            Комфортная для чтения <br/>
-                            типографика
-                        </p>
-                        <p class="menu-p" data-id="1">Удобная навигация по темам</p>
-                        <p class="menu-p" data-id="1">
-                            Возможность ведения блога в <br/>
-                            открытом и закрытом режимах
-                        </p>
-                    </div>
-                </div>
-                <div
-                        class="container menu--content link3 bgr-img-cover grid grid--menu"
-                        data-id="link3"
-                >
-                    <div class="flex flex-menu">
-                        <h2 class="h2 h2-menu">Приложения</h2>
-                        <p class="menu-p" data-id="2">Анализ рынка и целевой аудитории</p>
-                        <p class="menu-p" data-id="2">Исследование пути пользователя</p>
-                        <p class="menu-p" data-id="2">Создание стильного интерфейса</p>
-                        <p class="menu-p" data-id="2">
-                            Разработка удобных и быстрых <br/>
-                            мобильных приложений
-                        </p>
-                    </div>
-                </div>
-                <div
-                        class="container menu--content link4 bgr-img-cover grid grid--menu"
-                        data-id="link4"
-                >
-                    <div class="flex flex-menu">
-                        <h2 class="h2 h2-menu">UX/UI дизайн</h2>
-                        <p class="menu-p" data-id="3">Создание интерактивного прототипа</p>
-                        <p class="menu-p" data-id="3">Дизайн в современном стиле</p>
-                        <p class="menu-p" data-id="3">
-                            Разработка функционального <br/>
-                            интерфейса
-                        </p>
-                        <p class="menu-p" data-id="3">Работа с цветом и типографикой</p>
-                        <p class="menu-p" data-id="3">Дизайн логотипов и визиток</p>
-                    </div>
-                </div>
-                <div class="menu--links accent-font">
-                    <div class="flex menu--link" id="link4" data-info="UX/UI дизайн">
-                        <p class="menu--link-p">UX/UI дизайн</p>
-                    </div>
-                    <div class="flex menu--link" id="link3" data-info="Приложения">
-                        <p class="menu--link-p">Приложения</p>
-                    </div>
-                    <div
-                            class="flex menu--link"
-                            id="link2"
-                            data-info="Информационные порталы и блоги"
-                    >
-                        <p class="menu--link-p">Информационные порталы и блоги</p>
-                    </div>
-                    <div
-                            class="flex menu--link menu--link--hide"
-                            id="link1"
-                            data-info="Сайты под ключ"
-                    >
-                        <p class="menu--link-p">Сайты под ключ</p>
-                    </div>
-                </div>
+    <!-- menu for tablet -->
+    <section class="menu-tablet-section" id="menu">
+      
+      <div class="swiper mySwiperMenu">
+        <div class="swiper-wrapper">
+          <div class="flex flex-menu swiper-slide swiper-slide-menu link1">
+            <h2 class="h2 h2-menu h2-menu-lineheight">Сайты под ключ</h2>
+            <div class="flex flex-menu flex-menu-mobil">
+              <p class="menu-p" data-id="0">Индивидуальная разработка сайта</p>
+              <p class="menu-p" data-id="0">
+                Адаптивные сайты на любых устройствах
+              </p>
+              <p class="menu-p" data-id="0">
+                Исследование бизнеса, конкурентов и целевой аудитории
+              </p>
+              <p class="menu-p" data-id="0">
+                Наполнение контентом (фото, товары, статьи и т.п.)
+              </p>
+              <div
+                class="flex accent-font menu-accent-content menu-p"
+                data-id="0"
+              >
+                <div class="menu-content one">Лендинг</div>
+                <p class="menu-content-hide one-hide">
+                  <span class="bold">Лендинг</span>-это особый тип сайтов,
+                  оптимизированных для побуждения к действию
+                  интернет-пользователя. Традиционный лендинг описывает продукт,
+                  его преимущества и указывает на необходимость в приобретении
+                  этого продукта.
+                </p>
+                <div class="menu-content two">Корпоративный сайт</div>
+                <p class="menu-content-hide two-hide">
+                  <span class="bold">Корпоративный сайт</span>-это
+                  многостраничный и многоуровневый сайт, где можно найти полную
+                  информацию о фирме, ее руководстве, продукции, истории.
+                  Корпоративные сайты привлекают новых клиентов и удерживают
+                  старых.
+                </p>
+                <div class="menu-content three">Сайт-визитка</div>
+                <p class="menu-content-hide three-hide">
+                  <span class="bold">Сайт-визитка</span>-небольшой сайт, как
+                  правило, состоящий из пяти, семи веб-страниц и содержащий
+                  основную информацию об организации, частном лице, компании,
+                  товарах или услугах, прейскуранты, контактные данные.
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- project desctop -->
-        <section class="project-desctop-section">
-            <h2 class="container h2 h2-section">Наши проекты.</h2>
-            <div class="grid-project grid--2-cols">
-                <div class="project--block">
-                    <p class="menu-fonts project-text">Лэндинг для психолога</p>
-                    <img
-                            src="{% static 'img/macpro.png' %}"
-                            class="project-img"
-                            alt="landing"
-                    />
-                </div>
-                <div class="project--block">
-                    <p class="menu-fonts project-text">
-                        Онлайн платформа для IT-специалистов
-                    </p>
-                    <img
-                            src="{% static 'img/it-platform.png' %}"
-                            class="project-img"
-                            alt="it-platform"
-                    />
-                </div>
+          </div>
+          <div class="flex flex-menu swiper-slide swiper-slide-menu link2">
+            <h2 class="h2 h2-menu h2-menu-lineheight">
+              Информационные порталы и блоги
+            </h2>
+            <div class="flex flex-menu flex-menu-mobil">
+              <p class="menu-p" data-id="1">
+                Адаптивность на мобильных устройствах
+              </p>
+              <p class="menu-p" data-id="1">
+                Комфортная для чтения типографика
+              </p>
+              <p class="menu-p" data-id="1">Удобная навигация по темам</p>
+              <p class="menu-p" data-id="1">
+                Возможность ведения блога в открытом и закрытом режимах
+              </p>
             </div>
-            <p class="h2-section hide-on-mobil">&nbsp;</p>
-        </section>
-        <!-- menu for tablet -->
-        <section class="menu-tablet-section" id="menu">
-            <h2 class="container h2 h2-section">Наши услуги.</h2>
-            <div class="swiper mySwiperMenu">
-                <div class="swiper-wrapper">
-                    <div class="flex flex-menu swiper-slide swiper-slide-menu link1">
-                        <h2 class="h2 h2-menu h2-menu-lineheight">Сайты под ключ</h2>
-                        <div class="flex flex-menu flex-menu-mobil">
-                            <p class="menu-p" data-id="0">Индивидуальная разработка сайта</p>
-                            <p class="menu-p" data-id="0">
-                                Адаптивные сайты на любых устройствах
-                            </p>
-                            <p class="menu-p" data-id="0">
-                                Исследование бизнеса, конкурентов и целевой аудитории
-                            </p>
-                            <p class="menu-p" data-id="0">
-                                Наполнение контентом (фото, товары, статьи и т.п.)
-                            </p>
-                            <div
-                                    class="flex accent-font menu-accent-content menu-p"
-                                    data-id="0"
-                            >
-                                <div class="menu-content one">
-                                    Лендинг
-
-                                </div>
-                                <p class="menu-content-hide one-hide">
-                                    <span class="bold">Лендинг</span>-это особый тип сайтов,
-                                    оптимизированных для побуждения к действию
-                                    интернет-пользователя. Традиционный лендинг описывает
-                                    продукт, его преимущества и указывает на необходимость в
-                                    приобретении этого продукта.
-                                </p>
-                                <div class="menu-content two">
-                                    Корпоративный сайт
-
-                                </div>
-                                <p class="menu-content-hide two-hide">
-                                    <span class="bold">Корпоративный сайт</span>-это
-                                    многостраничный и многоуровневый сайт, где можно найти
-                                    полную информацию о фирме, ее руководстве, продукции,
-                                    истории. Корпоративные сайты привлекают новых клиентов и
-                                    удерживают старых.
-                                </p>
-                                <div class="menu-content three">
-                                    Сайт-визитка
-
-                                </div>
-                                <p class="menu-content-hide three-hide">
-                                    <span class="bold">Сайт-визитка</span>-небольшой сайт, как
-                                    правило, состоящий из пяти, семи веб-страниц и содержащий
-                                    основную информацию об организации, частном лице, компании,
-                                    товарах или услугах, прейскуранты, контактные данные.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-menu swiper-slide swiper-slide-menu link2">
-                        <h2 class="h2 h2-menu h2-menu-lineheight">
-                            Информационные порталы и блоги
-                        </h2>
-                        <div class="flex flex-menu flex-menu-mobil">
-                            <p class="menu-p" data-id="1">
-                                Адаптивность на мобильных устройствах
-                            </p>
-                            <p class="menu-p" data-id="1">
-                                Комфортная для чтения типографика
-                            </p>
-                            <p class="menu-p" data-id="1">Удобная навигация по темам</p>
-                            <p class="menu-p" data-id="1">
-                                Возможность ведения блога в открытом и закрытом режимах
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex flex-menu swiper-slide swiper-slide-menu link3">
-                        <h2 class="h2 h2-menu h2-menu-lineheight">Приложения</h2>
-                        <div class="flex flex-menu flex-menu-mobil">
-                            <p class="menu-p" data-id="2">Анализ рынка и целевой аудитории</p>
-                            <p class="menu-p" data-id="2">Исследование пути пользователя</p>
-                            <p class="menu-p" data-id="2">Создание стильного интерфейса</p>
-                            <p class="menu-p" data-id="2">
-                                Разработка удобных и быстрых мобильных приложений
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex flex-menu swiper-slide swiper-slide-menu link4">
-                        <h2 class="h2 h2-menu h2-menu-lineheight">UX/UI дизайн</h2>
-                        <div class="flex flex-menu flex-menu-mobil">
-                            <p class="menu-p" data-id="3">
-                                Создание интерактивного прототипа
-                            </p>
-                            <p class="menu-p" data-id="3">Дизайн в современном стиле</p>
-                            <p class="menu-p" data-id="3">
-                                Разработка функционального интерфейса
-                            </p>
-                            <p class="menu-p" data-id="3">Работа с цветом и типографикой</p>
-                            <p class="menu-p" data-id="3">Дизайн логотипов и визиток</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+          </div>
+          <div class="flex flex-menu swiper-slide swiper-slide-menu link3">
+            <h2 class="h2 h2-menu h2-menu-lineheight">Приложения</h2>
+            <div class="flex flex-menu flex-menu-mobil">
+              <p class="menu-p" data-id="2">Анализ рынка и целевой аудитории</p>
+              <p class="menu-p" data-id="2">Исследование пути пользователя</p>
+              <p class="menu-p" data-id="2">Создание стильного интерфейса</p>
+              <p class="menu-p" data-id="2">
+                Разработка удобных и быстрых мобильных приложений
+              </p>
             </div>
+          </div>
+          <div class="flex flex-menu swiper-slide swiper-slide-menu link4">
+            <h2 class="h2 h2-menu h2-menu-lineheight">UX/UI дизайн</h2>
+            <div class="flex flex-menu flex-menu-mobil">
+              <p class="menu-p" data-id="3">
+                Создание интерактивного прототипа
+              </p>
+              <p class="menu-p" data-id="3">Дизайн в современном стиле</p>
+              <p class="menu-p" data-id="3">
+                Разработка функционального интерфейса
+              </p>
+              <p class="menu-p" data-id="3">Работа с цветом и типографикой</p>
+              <p class="menu-p" data-id="3">Дизайн логотипов и визиток</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <h2 class="container h2 h2-section" id="projects">Наши проекты.</h2>
+    <!-- project desctop -->
+    <section class="project-desctop-section">
+      <div class="grid-project grid--2-cols">
+        <div class="project--block">
+          <p class="menu-fonts project-text">Лэндинг для психолога</p>
+          <img
+            src="{% static 'img/macpro.png' %}"
+            class="project-img"
+            alt="landing"
+          />
+        </div>
+        <div class="project--block">
+          <p class="menu-fonts project-text">
+            Онлайн платформа для IT-специалистов
+          </p>
+          <img
+            src="{% static 'img/it-platform.png' %}"
+            class="project-img"
+            alt="it-platform"
+          />
+        </div>
+      </div>
+      <p class="h2-section hide-on-mobil">&nbsp;</p>
+    </section>
+    <!-- scroll project for tablet -->
+    <section class="project-tablet-section" id="price">
+      <div class="swiper mySwiperProjects">
+        <div class="swiper-wrapper">
+          <div class="project--block swiper-slide swiper-slide-project">
+            <p class="menu-fonts project-text">Лэндинг для психолога</p>
+            <img
+              src="{% static 'img/macpro.png' %}"
+              class="project-img-swiper-tablet"
+              alt="landing"
+            />
+          </div>
+          <div class="project--block swiper-slide swiper-slide-project">
+            <p class="menu-fonts project-text">
+              Онлайн платформа для IT-специалистов
+            </p>
+            <img
+              src="{% static 'img/it-platform.png' %}"
+              class="project-img-swiper-tablet"
+              alt="it-platform"
+            />
+          </div>
+        </div>
+      </div>
+      <p class="h2-section">&nbsp;</p>
+    </section>
+  </main>
+  <div class="h2-section show-on-mobil">&nbsp;</div>
 
-
-            <!-- scroll project for tablet -->
-            <section class="project-tablet-section" id="price">
-                <h2 class="container h2 h2-section">Наши проекты.</h2>
-                <div class="swiper mySwiperProjects">
-                    <div class="swiper-wrapper">
-                        <div class="project--block swiper-slide swiper-slide-project">
-                            <p class="menu-fonts project-text">Лэндинг для психолога</p>
-                            <img
-                                    src="{% static 'img/macpro.png' %}"
-                                    class="project-img-swiper-tablet"
-                                    alt="landing"
-                            />
-                        </div>
-                        <div class="project--block swiper-slide swiper-slide-project">
-                            <p class="menu-fonts project-text">
-                                Онлайн платформа для IT-специалистов
-                            </p>
-                            <img
-                                    src="{% static 'img/it-platform.png' %}"
-                                    class="project-img-swiper-tablet"
-                                    alt="it-platform"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <p class="h2-section">&nbsp;</p>
-            </section>
-        </section>
-    </main>
-    <div class="h2-section show-on-mobil">&nbsp;</div>
-
-    {% include 'mainapp/includes/inc__footer.html' %}
-
-    </body>
+  {% include 'mainapp/includes/inc__footer.html' %}
+</body>
 {% endblock %}
