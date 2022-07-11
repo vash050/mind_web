@@ -1,5 +1,5 @@
+import requests
 from django.db import models
-
 
 #
 # from customerapp.models import Customer
@@ -46,6 +46,11 @@ from django.db import models
 #
 #     def __str__(self):
 #         return self.name_site
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
+from tmp import TOKEN, CHANNEL_ID
+
 
 class Order(models.Model):
     Type_site = [
@@ -66,3 +71,24 @@ class Order(models.Model):
 
     def __str__(self):
         return self.name
+
+@receiver(post_save, sender=Order)
+def send_message(sender, **kwargs):
+    message = f'пришел заказ {kwargs["instance"].name} {kwargs["instance"].phone} {kwargs["instance"].email}'
+    send_to_telegram(message)
+
+
+def send_to_telegram(message):
+    token = TOKEN
+    url = "https://api.telegram.org/bot"
+    channel_id = CHANNEL_ID
+    url += token
+    method = url + "/sendMessage"
+
+    r = requests.post(method, data={
+        "chat_id": channel_id,
+        "text": message
+    })
+
+    if r.status_code != 200:
+        raise Exception("post_text error")
