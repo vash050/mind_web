@@ -1,0 +1,534 @@
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  html {
+    font-size: 50%;
+  }
+
+  .btn-nav {
+    width: 30rem;
+  }
+
+  .heading-primary {
+    font-size: 8rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 67.5em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .container {
+    /* 1140px */
+    /* max-width: 120rem; */
+    padding: 0 3.5rem;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: 0 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .header-absolute {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .section-hero {
+    height: 100vh;
+    position: relative;
+  }
+
+  .hero {
+    height: 100%;
+  }
+
+  .heading-primary {
+    font-size: 6rem;
+  }
+
+  .bgr-img-cover {
+    background-size: auto;
+  }
+
+  .menu-desctop,
+  .prices-desctop,
+  .team-desctop,
+  .project-desctop-section,
+  .heading-primary-mobile,
+  .show-on-mobil,
+  .hide-on-mobil,
+  .hide {
+    display: none;
+  }
+
+  .menu-tablet-section,
+  .team-tablet,
+  .prices-tablet,
+  .sidenav-link-mobil {
+    display: block;
+  }
+
+  .hide-desctop {
+    display: flex;
+  }
+
+  /**************************/
+  /* MENU SECTION */
+  /**************************/
+
+  .main-nav-list-li {
+    display: none;
+  }
+
+  .project-tablet-section {
+    display: block;
+  }
+
+  .sidenav {
+  padding-right: 3.5rem;
+  }
+
+  .sidenav .closebtn {
+    padding-right: 3.5rem;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .project-text {
+    font-size: 3rem;
+  }
+
+  .swiper-slide-project {
+    margin-right: 2rem !important;
+    padding: 5rem;
+    background: linear-gradient(116.55deg, #ee6bfa 0%, #7c56e9 100%);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100% !important;
+  }
+
+  .project-img-swiper-tablet {
+    height: 62rem;
+    z-index: 1;
+  }
+
+  .swiper-button-prev {
+    background-image: url(../img/chevron_left.svg) !important;
+    background-repeat: no-repeat;
+    height: 3rem !important;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+
+  .swiper-button-next {
+    background-image: url(../img/chevron_left.svg) !important;
+    transform: rotate(180deg);
+    background-repeat: no-repeat;
+    height: 3rem !important;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+
+  .menu-content-hide {
+    width: 100%;
+    padding: 2.5rem;
+  }
+
+  .one:hover, .one:active ~ .one-hide {
+    display: block;
+  }
+
+  .one:active ~ .one-hide {
+    display: block;
+  }
+  .two:hover, .two:active ~ .two-hide {
+    display: block;
+  }
+
+ 
+  .three:hover, .three:active ~ .three-hide {
+    display: block;
+  }
+
+  .menu-list {
+    margin-bottom: 11.8rem;
+  }
+
+  .mySwiperMenu {
+    height: 58.5rem;
+  }
+
+  .swiper-slide-menu {
+    background-size: cover;
+    padding: 5rem;
+    font-size: 3rem;
+    height: 100%;
+  }
+
+  .h2-section {
+    height: 7.6rem;
+    line-height: 7.6rem;
+  }
+  /**************************/
+  /* PRICE SECTION */
+  /**************************/
+
+  .prices-tablet {
+    color: #1e0073;
+    margin-bottom: 5rem;
+  }
+
+  .prices-block-tablet {
+    padding: 2rem;
+    margin-right: 2rem;
+    
+  }
+
+  .prices-block {
+    /* height: 40rem; */
+      height: 100%;
+  }
+
+
+
+  /**************************/
+  /* TEAM SECTION */
+  /**************************/
+  .team-tablet {
+    color: #1e0073;
+    margin-bottom: 8rem;
+  }
+
+  .mySwiperTeam {
+    margin-top: 14rem;
+  }
+
+  .swiper-slide-team {
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-right: 2rem;
+  }
+
+  .name {
+    padding-bottom: 1.5rem;
+  }
+
+  .main-nav-list-mobil {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .project-desctop-section,
+  .team-desctop,
+  .prices-desctop,
+  .show-on-mobil {
+    display: block;
+  }
+
+  .hide-desctop {
+    display: flex;
+  }
+
+  .project-tablet-section,
+  .team-tablet,
+  .prices-tablet,
+  .heading-primary,
+  .hide-on-mobil,
+  .hide {
+    display: none !important;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 2.2rem;
+  }
+
+  .logo {
+    height: 5.8rem;
+  }
+
+  .burger-menu {
+    height: 0.3rem;
+  }
+
+  .burger-menu-block::after,
+  .burger-menu-block::before {
+    height: 0.3rem;
+  }
+
+  .burger-menu-block {
+    width: 3.8rem;
+    height: 2.8rem;
+  }
+
+  .header {
+    height: 9.4rem;
+    padding: 0 2.2rem;
+  }
+
+  .section-hero {
+    height: 100vh;
+    position: relative;
+  }
+
+  .hero {
+    /* padding: 50% 0; */
+    height: 100%;
+    /* flex-direction: column; */
+  }
+
+  .heading-primary-mobile {
+    text-align: center;
+    display: inline-block;
+    font-size: 3.8rem;
+    line-height: 4.2rem;
+  }
+
+  .bgr-img-cover {
+    background-size: cover;
+  }
+
+  #openNav {
+    margin: 2rem;
+  }
+
+  /* sidenav */
+
+  .sidenav {
+    width: 100vw;
+    height: 100vh;
+    padding-right: 2.85rem;
+    padding-left: 2.85rem;
+    padding-top: 6.85rem;
+  }
+
+  .sidenav .closebtn {
+    margin-top: 2.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .sidenav-link {
+    font-size: 3rem !important;
+  }
+
+  .sidenav-contact {
+    font-size: 2.5rem;
+  }
+
+  .sidenav-social-media {
+    gap: 5.5rem;
+  }
+
+  .menu__list-mobil {
+    align-items: center;
+  }
+
+  .project-img {
+    width: 110%;
+  }
+
+  .grid-project {
+    row-gap: 3.75rem;
+    margin-bottom: 3.75rem;
+  }
+
+  .project--block {
+    padding: 2rem;
+  }
+
+  .project--block::before {
+    content: "";
+    position: absolute;
+    bottom: 4%;
+    left: 12%;
+    height: 80%;
+    width: 90%;
+    background: rgba(195, 195, 195, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .project-text {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+
+  .h2,
+  .h2-footer {
+    font-size: 2.8rem;
+  }
+
+  .h2-footer {
+    text-align: center;
+  }
+
+  /* swiper menu */
+
+  .swiper-slide-menu {
+    padding: 1.5rem 3.2rem;
+    font-size: 2rem;
+  }
+
+  .menu-accent-content {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .mySwiperMenu {
+    height: 50.5rem;
+  }
+
+  .flex-menu {
+      gap: 2.8rem;
+  }
+
+  .flex-menu-mobil {
+      width: 100%;
+      padding-left: 1.8rem;
+  }
+
+  .link1 {
+    background-position: 30%;
+  }
+
+  .link3 {
+    background-position: 63%;
+  }
+
+  .h2-menu-lineheight {
+    line-height: 3.8rem;
+    font-weight: 600;
+  }
+
+  .menu-content-hide {
+      width: 100%;
+      font-size: 1.5rem;
+  }
+
+  .one:hover, .one:active ~ .one-hide {
+    display: block;
+  }
+  .two:hover, .two:active ~ .two-hide {
+    display: block;
+  }
+
+ 
+  .three:hover, .three:active ~ .three-hide {
+    display: block;
+  }
+  
+
+  /* footer section */
+
+  .footer-form {
+    width: 100vw;
+    padding: 2.75rem;
+  }
+
+  .text-footer {
+    width: 100vw;
+    padding: 0 2.75rem;
+    text-align: center;
+  }
+
+  .grid-mobil-footer {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3.2rem;
+  }
+
+  .footer-info-contact,
+  .footer-info-menu {
+    font-size: 1.5rem;
+  }
+
+  .footer-info-menu > li {
+    text-align: right;
+  }
+
+  .footer-social-media {
+    flex-direction: row-reverse;
+    gap: 3.5rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+  }
+  .icon-social-media {
+    width: 3rem;
+  }
+
+  /* service.html */
+  .prices-text {
+    font-size: 2rem;
+  }
+  .prices-block {
+    padding: 2rem 0;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+  .price-gaps {
+    column-gap: 2.4rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .price-base-gaps {
+    margin-bottom: 3.75rem;
+  }
+
+  .mobile-line-bottom {
+    border-bottom: 1px solid #1e0073;
+  }
+
+  .mobile-line-top {
+    border-top: 1px solid #1e0073;
+  }
+
+  /* team.html */
+
+  .team-img {
+    width: 100%;
+  }
+
+  .team-desctop {
+    margin-bottom: 3.3rem;
+  }
+
+  .team {
+    margin-top: 14rem;
+  }
+}

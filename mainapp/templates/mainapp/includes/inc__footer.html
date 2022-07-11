@@ -1,0 +1,96 @@
+{% load static %}
+
+<footer class="container footer">
+    <div class="flex footer-section">
+        <h2 class="h2-footer">Мы всегда рады сотрудничеству!</h2>
+        <p class="text-footer" id="test">
+            Заполните, пожалуйста, форму и мы свяжемся с вами в ближайшее время!
+        </p>
+        <!-- <form action="#" 
+        class="flex footer-form" name="main" method="post" id="formConnect"
+              enctype="multipart/form-data"> -->
+              <form name="main" class="flex footer-form" onsubmit="return fetchpost()" id="formConnect">
+            {% csrf_token %}
+            <input type="hidden" id="urlForm" value="{% url 'mainapp:order' %}">
+            <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Имя"
+                    class="input-form timeline-form"
+            />
+            <div class="form--input--block timeline-form">
+                <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Телефон"
+                        class="input-form"
+                />
+            </div>
+            <div class="form--input--block timeline-form">
+                <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="E-mail"
+                        class="input-form"
+                />
+            </div>
+{#            <input#}
+{#                    type="text"#}
+{#                    name="website_type"#}
+{#                    id="website_type"#}
+{#                    placeholder="Тип сайта"#}
+{#                    class="input-form timeline-form"#}
+{#            />#}
+
+            <label for="policy" class="label-form timeline-form">
+                <input type="checkbox" name="policy" id="policy" required/>
+                <span
+                >Я подтверждаю согласие на обработку персональных данных в
+            соответствии с условиями
+            <span class="policy-span">Политики конфиденциальности</span></span
+                >
+            </label>
+
+            <button type="submit" class="button-form timeline-form" id="submitButton">
+                Отправить
+            </button>
+        </form>
+        <div class="form-messagesent messSent" id="messSent">
+            <p class="p-message">Ваша заявка отправлена.</p>
+            <p class="p-message">Спасибо! Мы скоро свяжемся с вами.</p>
+        </div>
+        <div class="form-messagesent messNotSent" id="messNotSent">
+            <p class="p-message">Что-то пошло не так</p>
+            <p class="p-message">попробуйте отправить позже</p>
+        </div>
+    </div>
+    <div class="grid footer-info grid-mobil-footer">
+        <div class="flex footer-info-contact">
+            <p>+7 911 402 43 89</p>
+            <p>info@mind-web.ru</p>
+        </div>
+        <nav>
+            <ul class="flex footer-info-menu">
+
+                <li><a href="{% url 'mainapp:team' %}" class="footer-link">О нас.</a> </li>
+                <li><a href="{% url 'mainapp:service' %}" class="footer-link">Тарифы.</a> </li>
+                <li><a href="#" class="footer-link">Политика конфиденциальности.</a></li>
+            </ul>
+        </nav>
+        <div class="flex footer-social-media">
+            <img
+                    src="{% static 'img/telegram.svg' %}"
+                    class="icon-social-media"
+                    alt="telegram icon"
+            />
+            <img
+                    src="{% static 'img/vkontakte.svg' %}"
+                    class="icon-social-media"
+                    alt="vkontakte icon"
+            />
+        </div>
+    </div>
+</footer>

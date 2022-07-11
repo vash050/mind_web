@@ -1,0 +1,90 @@
+{% load static %}
+
+    <header class="flex header {% if request.resolver_match.url_name == 'index' %} header-absolute {% else %} black-bgr {% endif %} ">
+        <nav class="main-nav">
+            <ul class="flex main-nav-list">
+                <li>
+                    <a href="{% url 'mainapp:index' %}">
+                        <img class="logo" alt="MindWeb logo" src="{% static 'img/logo.svg' %}"/>
+                    </a>
+                </li>
+                <li class="main-nav-list-li">
+                    <a class="main-nav-link" href=""> {# сссылка на услуги #}
+                        Услуги.
+                        <svg viewBox="0 0 104 52" fill="none" class="svg svg-main-menu">
+                            <path
+                                    class="path"
+                                    d="M42.5 7C42.5 7 15.9999 6 6.99996 12.5C-1.99999 19 1.99999 29.5 3.99997 33.5C5.99994 37.5 9.49997 45 24.5 49C39.5 53 62.5 51 72.9999 49C83.4999 47 92.9999 46.5 99.4999 37.5C106 28.5 103 21.5 91.9999 15C80.9999 8.5 74.3412 7.78516 62.5 5C52.1239 2.55946 35.5 1 35.5 1"
+                            />
+                        </svg>
+                    </a>
+                </li>
+                <li class="main-nav-list-li">
+                    <a class="main-nav-link" href="">{#  ccылка на проекты #}
+                        Проекты.
+                        <svg viewBox="0 0 104 52" fill="none" class="svg svg-main-menu-big">
+                            <path
+                                    class="path"
+                                    d="M42.5 7C42.5 7 15.9999 6 6.99996 12.5C-1.99999 19 1.99999 29.5 3.99997 33.5C5.99994 37.5 9.49997 45 24.5 49C39.5 53 62.5 51 72.9999 49C83.4999 47 92.9999 46.5 99.4999 37.5C106 28.5 103 21.5 91.9999 15C80.9999 8.5 74.3412 7.78516 62.5 5C52.1239 2.55946 35.5 1 35.5 1"
+                            />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex main-nav-list">
+            <button class="btn-nav hide">Связаться с нами</button>
+            <div class="flex burger-menu-block openNav" id="openNav">
+                <div class="burger-menu openNav">&nbsp;</div>
+            </div>
+        </div>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <ul id="myDropdown" class="flex menu__list">
+            <li id="closeNav" class="closebtn accent-font closeNav">&times;</li>
+            <li class="sidenav-link-mobil">
+                <a href="{% url 'mainapp:service' %}" class="sidenav-link main-nav-link">
+                    Услуги.
+                </a>
+            </li>
+            <li class="sidenav-link-mobil">
+                <a href="#" class="sidenav-link main-nav-link">
+                    Проекты.
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'mainapp:team' %}" class="sidenav-link main-nav-link">
+                    О нас.
+                    <svg viewBox="0 0 104 52" fill="none" class="svg svg-sidenav">
+                        <path
+                                class="path"
+                                d="M42.5 7C42.5 7 15.9999 6 6.99996 12.5C-1.99999 19 1.99999 29.5 3.99997 33.5C5.99994 37.5 9.49997 45 24.5 49C39.5 53 62.5 51 72.9999 49C83.4999 47 92.9999 46.5 99.4999 37.5C106 28.5 103 21.5 91.9999 15C80.9999 8.5 74.3412 7.78516 62.5 5C52.1239 2.55946 35.5 1 35.5 1"
+                        />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'mainapp:service' %}" class="main-nav-link sidenav-link ">
+                    Тарифы.
+                    <svg viewBox="0 0 104 52" fill="none" class="svg svg-sidenav-long">
+                        <path
+                                class="path"
+                                d="M42.5 7C42.5 7 15.9999 6 6.99996 12.5C-1.99999 19 1.99999 29.5 3.99997 33.5C5.99994 37.5 9.49997 45 24.5 49C39.5 53 62.5 51 72.9999 49C83.4999 47 92.9999 46.5 99.4999 37.5C106 28.5 103 21.5 91.9999 15C80.9999 8.5 74.3412 7.78516 62.5 5C52.1239 2.55946 35.5 1 35.5 1"
+                        />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <div class="flex menu__list menu__list-mobil">
+            <div class="main-nav-list-mobil hide-desctop">
+                <button class="btn-nav">Связаться с нами</button>
+            </div>
+            <p class="sidenav-contact">+7 911 402 43 89</p>
+            <p class="sidenav-contact">info@mind-web.ru</p>
+            <div class="flex sidenav-social-media">
+                <img src="{% static 'img/telegram.svg' %}" alt="telegram-icon">
+                <img src="{% static 'img/instagram.svg' %}" alt="instagram-icon">
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,66 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block conteiner %}
+
+
+    <body>
+
+    {% include 'mainapp/includes/inc__header.html' %}
+
+    <section class="team-desctop">
+        <h2 class="container h2 h2-section">Наша команда.</h2>
+        <div class="container grid grid--3-cols team">
+            <div>
+                <img src="{% static 'img/anna.jpg' %}" class="team-img" alt="Анна Подрезова"/>
+                <p class="name">Анна Подрезова</p>
+                <p class="profession">UX/UI дизайнер</p>
+            </div>
+            <div>
+                <img src="{% static 'img/vasilij.jpg' %}" class="team-img" alt="Василий Щербатых"/>
+                <p class="name">Василий Щербатых</p>
+                <p class="profession">Backend разработчик</p>
+            </div>
+            <div>
+                <img src="{% static 'img/tamara.jpg' %}" class="team-img" alt="Тамара Цэвээн"/>
+                <p class="name">Тамара Цэвээн</p>
+                <p class="profession">Frontend разработчик</p>
+            </div>
+        </div>
+    </section>
+    <section class="team-tablet">
+        <h2 class="container h2 h2-section">Наша команда.</h2>
+        <div class="swiper mySwiperTeam">
+            <div class="swiper-wrapper">
+                <div class="flex swiper-slide swiper-slide-team">
+                    <img src="{% static 'img/anna.jpg' %}" alt="Анна Подрезова"/>
+                    <div>
+                        <p class="name">Анна Подрезова</p>
+                        <p class="profession">UX/UI дизайнер</p>
+                    </div>
+                </div>
+                <div class="flex swiper-slide swiper-slide-team">
+                    <img src="{% static 'img/vasilij.jpg' %}" alt="Василий Щербатых"/>
+                    <div>
+                        <p class="name">Василий Щербатых</p>
+                        <p class="profession">Backend разработчик</p>
+                    </div>
+                </div>
+                <div class="flex swiper-slide swiper-slide-team">
+                    <img src="{% static 'img/tamara.jpg' %}" alt="Тамара Цэвээн"/>
+                    <div>
+                        <p class="name">Тамара Цэвээн</p>
+                        <p class="profession">Frontend разработчик</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- </div> -->
+    </section>
+
+    {% include 'mainapp/includes/inc__footer.html' %}
+
+    </body>
+{% endblock %}
