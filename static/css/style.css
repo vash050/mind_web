@@ -691,7 +691,13 @@ input[type="checkbox"]:checked::before {
   gap: 4rem;
 }
 
+input:disabled::placeholder {
+  color: gray;
+}
 
+button[disabled]{
+  color: gray;
+}
 
 /**************************/
 /* PRICE SECTION */
